@@ -32,7 +32,7 @@ public class GameManager : MonoBehaviour
 
     public void ChecarCor(int corIndex)
     {
-        if(corIndex == sequencia[corDaVez])
+        if(sequencia[corDaVez] == corIndex)
         {
             corDaVez++; 
 

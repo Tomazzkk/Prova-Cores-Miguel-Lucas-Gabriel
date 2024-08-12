@@ -19,22 +19,22 @@ public class UiManager : MonoBehaviour
         instance = this;
     }
     #endregion
-    void Start()
+   public  void Start()
     {
         for (int i = 0; i < botoes.Length; i++)
         {
             int x = i;
-            botoes[i].onClick.AddListener(() => GameManager.instance.ChecaCor(x));
+            botoes[i].onClick.AddListener(() => GameManager.instance.ChecarCor(x));
         }
     }
 
     public void AtualizarAcertos(int acertos)
     {
-        acertouTexto.text = acertos.ToString();
+        acertouTexto.text = acertos.ToString("0");
     }
     public void AtualizarErros(int erros)
     {
-        errouTexto.text = erros.ToString();
+        errouTexto.text = erros.ToString("0");
     }
 
     public void LimparTexto()
@@ -42,8 +42,8 @@ public class UiManager : MonoBehaviour
         sequenciaTexto.text = ToString();
     }
 
-    public void AtualizarSequencia(string roxo)
+    public void AtualizarSequencia(string cor )
     {
-        roxo += sequenciaTexto.ToString();
+        sequenciaTexto.text += cor + "," + cor;
     }
 }
