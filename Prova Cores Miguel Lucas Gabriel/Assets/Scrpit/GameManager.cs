@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     int corDaVez, acertos, erros;
-    public int[] sequencia;
+    public int[] sequencia ;
     [SerializeField] public string[] nomes;
     public static GameManager instance;
     private void Awake()

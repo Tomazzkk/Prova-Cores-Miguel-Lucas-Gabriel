@@ -44,6 +44,7 @@ public class UiManager : MonoBehaviour
 
     public void AtualizarSequencia(string cor )
     {
-        sequenciaTexto.text += cor + "," + cor;
+
+        sequenciaTexto.text = cor.ToString();
     }
 }
